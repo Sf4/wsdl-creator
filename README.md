@@ -26,7 +26,7 @@ To install wsdl-creator at your project use [composer](http://getcomposer.org).
 
 ```
 require: {
-	"sf4/wsdl-creator": "2.*"
+	"sf4/wsdl-creator": "^2"
 }
 ```
 
