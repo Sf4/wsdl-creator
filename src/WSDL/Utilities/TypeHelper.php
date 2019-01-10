@@ -24,7 +24,7 @@
 namespace WSDL\Utilities;
 
 use WSDL\Types\Arrays;
-use WSDL\Types\Object;
+use WSDL\Types\Object as ObjectType;
 use WSDL\Types\Simple;
 
 /**
@@ -46,7 +46,7 @@ class TypeHelper
 
     public static function isObject($type)
     {
-        return $type instanceof Object;
+        return $type instanceof ObjectType;
     }
 
     public static function getXsdType($type)

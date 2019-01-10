@@ -25,7 +25,7 @@ namespace WSDL\Parser;
 
 use Ouzo\Utilities\Arrays as OuzoArrays;
 use WSDL\Types\Arrays;
-use WSDL\Types\Object;
+use WSDL\Types\Object as ObjectType;
 use WSDL\Types\Simple;
 
 /**
@@ -61,7 +61,7 @@ class ParameterParser
 
         switch ($this->_strategy) {
             case 'object':
-                return new Object($this->getType(), $this->getName(), $this->complexTypes(), $this->getOptional());
+                return new ObjectType($this->getType(), $this->getName(), $this->complexTypes(), $this->getOptional());
             case 'wrapper':
                 return $this->_createWrapperObject();
             case 'array':
@@ -105,9 +105,9 @@ class ParameterParser
         $wrapper = $this->wrapper();
         $object = null;
         if ($wrapper->getComplexTypes()) {
-            $object = new Object($this->getType(), $this->getName(), $wrapper->getComplexTypes(), $this->getOptional());
+            $object = new ObjectType($this->getType(), $this->getName(), $wrapper->getComplexTypes(), $this->getOptional());
         }
-        return new Object($this->getType(), $this->getName(), $object, $this->getOptional());
+        return new ObjectType($this->getType(), $this->getName(), $object, $this->getOptional());
     }
 
     private function _createArrayObject()
@@ -115,10 +115,10 @@ class ParameterParser
         $object = null;
         if ($this->_type == 'wrapper') {
             $complex = $this->wrapper()->getComplexTypes();
-            $object = new Object($this->getType(), $this->getName(), $complex, $this->getOptional());
+            $object = new ObjectType($this->getType(), $this->getName(), $complex, $this->getOptional());
         } elseif ($this->isComplex()) {
             $complex = $this->complexTypes();
-            $object = new Object($this->getType(), $this->getName(), $complex, $this->getOptional());
+            $object = new ObjectType($this->getType(), $this->getName(), $complex, $this->getOptional());
         }
         return new Arrays($this->getType(), $this->getName(), $object, $this->getOptional());
     }

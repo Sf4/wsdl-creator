@@ -11,7 +11,7 @@ Introduction
 
 WSDL creator allows generating WSDL documents based on PHP classes using annotations and reflection mechanism. This generator also give possibilty to generating overview methods and parameters with SOAP examples used in WSDL.
 
-Support: >= PHP5.5.
+Support: >= PHP7.2.
 
 Installation
 ------------
@@ -26,7 +26,7 @@ To install wsdl-creator at your project use [composer](http://getcomposer.org).
 
 ```
 require: {
-	"sf4/wsdl-creator": "1.*"
+	"sf4/wsdl-creator": "2.*"
 }
 ```
 

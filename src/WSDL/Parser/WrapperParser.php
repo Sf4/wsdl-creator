@@ -26,7 +26,7 @@ namespace WSDL\Parser;
 use ReflectionClass;
 use ReflectionProperty;
 use WSDL\Types\Arrays;
-use WSDL\Types\Object;
+use WSDL\Types\Object as ObjectType;
 
 /**
  * WrapperParser
@@ -83,7 +83,7 @@ class WrapperParser
 
         switch ($strategy) {
             case 'object':
-                $this->_complexTypes[] = new Object($type, $name, $this->getComplexTypes(), $optional);
+                $this->_complexTypes[] = new ObjectType($type, $name, $this->getComplexTypes(), $optional);
                 break;
             case 'wrapper':
                 $this->_complexTypes[] = $this->_createWrapperObject($type, $name, $docComment, $optional);
@@ -102,9 +102,9 @@ class WrapperParser
         $wrapper = $this->wrapper($type, $docComment);
         $object = null;
         if ($wrapper->getComplexTypes()) {
-            $object = new Object($type, $name, $wrapper->getComplexTypes(), $optional);
+            $object = new ObjectType($type, $name, $wrapper->getComplexTypes(), $optional);
         }
-        return new Object($type, $name, $object, $optional);
+        return new ObjectType($type, $name, $object, $optional);
     }
 
     private function _createArrayObject($type, $name, $docComment, $optional = false)
@@ -112,10 +112,10 @@ class WrapperParser
         $object = null;
         if ($type == 'wrapper') {
             $complex = $this->wrapper($type, $docComment)->getComplexTypes();
-            $object = new Object($type, $name, $complex, $optional);
+            $object = new ObjectType($type, $name, $complex, $optional);
         } elseif ($this->isComplex($type)) {
             $complex = $this->getComplexTypes();
-            $object = new Object($type, $name, $complex, $optional);
+            $object = new ObjectType($type, $name, $complex, $optional);
         }
         if (!isset(self::$arrayCnt[$name])) {
             self::$arrayCnt[$name] = 0;
