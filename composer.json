@@ -1,5 +1,5 @@
 {
-  "name": "georgo/wsdl-creator",
+  "name": "sf4/wsdl-creator",
   "description": "PHP WSDL creator using PHPdoc (annotations, reflections).",
   "minimum-stability": "dev",
   "license": "MIT",
@@ -20,6 +20,10 @@
     {
       "name": "Tomas K.",
       "email": "iam@tomask.info"
+    },
+    {
+      "name": "Siim Liimand",
+      "email": "siim.liimand@gmail.com"
     }
   ],
   "require": {

@@ -26,7 +26,7 @@ To install wsdl-creator at your project use [composer](http://getcomposer.org).
 
 ```
 require: {
-	"georgo/wsdl-creator": "1.*"
+	"sf4/wsdl-creator": "1.*"
 }
 ```
 
