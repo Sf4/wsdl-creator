@@ -23,7 +23,7 @@ class WrapperCommand extends InitCommand
             'trace' => true, 'cache_wsdl' => WSDL_CACHE_NONE
         ));
 
-        $this->serviceInfo('Wrapper Object - document/literal wrapped');
+        $this->serviceInfo('Wrapper ObjectType - document/literal wrapped');
 
         $this->renderMethodsTable();
 

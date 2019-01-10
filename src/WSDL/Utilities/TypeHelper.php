@@ -24,7 +24,7 @@
 namespace WSDL\Utilities;
 
 use WSDL\Types\Arrays;
-use WSDL\Types\Object as ObjectType;
+use WSDL\Types\ObjectType;
 use WSDL\Types\Simple;
 
 /**

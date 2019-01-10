@@ -26,11 +26,11 @@ namespace WSDL\Types;
 use WSDL\Parser\ComplexTypeParser;
 
 /**
- * Object
+ * ObjectType
  *
  * @author Piotr Olaszewski <piotroo89@gmail.com>
  */
-class Object implements Type
+class ObjectType implements Type
 {
     private $_type;
     private $_name;

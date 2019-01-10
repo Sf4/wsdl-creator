@@ -25,7 +25,7 @@ namespace WSDL\Parser;
 
 use Ouzo\Utilities\Arrays as OuzoArrays;
 use WSDL\Types\Arrays;
-use WSDL\Types\Object as ObjectType;
+use WSDL\Types\ObjectType;
 use WSDL\Types\Simple;
 
 /**

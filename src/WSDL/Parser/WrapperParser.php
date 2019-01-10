@@ -26,7 +26,7 @@ namespace WSDL\Parser;
 use ReflectionClass;
 use ReflectionProperty;
 use WSDL\Types\Arrays;
-use WSDL\Types\Object as ObjectType;
+use WSDL\Types\ObjectType;
 
 /**
  * WrapperParser

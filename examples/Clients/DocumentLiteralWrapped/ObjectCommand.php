@@ -23,7 +23,7 @@ class ObjectCommand extends InitCommand
             'trace' => true, 'cache_wsdl' => WSDL_CACHE_NONE
         ));
 
-        $this->serviceInfo('Client Object - document/literal wrapped');
+        $this->serviceInfo('Client ObjectType - document/literal wrapped');
 
         $this->renderMethodsTable();
 

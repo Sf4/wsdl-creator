@@ -23,7 +23,7 @@ class ObjectCommand extends InitCommand
             'trace' => true, 'cache_wsdl' => WSDL_CACHE_NONE
         ));
 
-        $this->serviceInfo('Client Object - rpc/literal');
+        $this->serviceInfo('Client ObjectType - rpc/literal');
 
         $this->renderMethodsTable();
 
